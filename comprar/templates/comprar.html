@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="container">
+
+      <div style="float:right;">
+
+        {% if request.user.is_authenticated %}
+
+        {% include "carro/widget.html" %}
+
+        {% else %}
+
+          <div class="alert alert-danger text-center" style="margin-top:10px; margin-left:25%;">Logeate para poder accceder al carro</div>
+
+        {% endif %}
+
+        {% if messages %}
+        
+        {% for message in messages %}
+        
+        <div class="alert alert-{{ message.tags }}" style="margin-left: 30%;">{{ message }}</div>
+        
+        {% endfor %}
+        
+        {% endif %}
+
+
+      </div>
+
+
+
+
+
+
+     <div class="row">
+
+    {% for producto in productos %}
+
+      <div class="col-md-3">
+
+        <div class="card" style="width:100%; height: auto; margin: 10px 5px;">
+
+          <img src="{{producto.imagen.url}}" class="card-img-top" style="width:auto;">
+
+          <div class="card-body" style="text-align:center;">
+
+            <h5 class="card-title">{{producto.titulo}}</h5>
+
+            <p class="card-text" style="font-style:italic;">{{producto.formato}}</p>
+
+            <p class="card-text">{{producto.precio}}&nbsp;€</p>
+
+
+
+        </div>
+
+        <div class="card-footer text-center">
+
+          <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success">Añadir al carro</a>
+
+
+        </div>
+
+
+
+
+        </div>
+
+      </div>
+
+            
+      <!-- 
+      
+            Formato: {{producto.formato}}
+
+              Precio:  $ -->
+
+            
+
+
+
+    {% endfor %}
+     </div>
+    </div>
+
+{% endblock %}

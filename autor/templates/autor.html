@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="col-md-6" style="margin-top:20px; text-align:justify; margin-left:30%; width:750px;">
+    <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+        <div class="card-body d-flex flex-column align-items-start">
+
+        <h3 class="mb-0">Albert Fernandez</h3>
+        <div class="mb-1" style="color:darkgray;">Autor</div>
+        <p class="card-text mb-auto">Albert Fernández des de siempre fue un chico creativo e imaginativo, poco a poco fue descubriendo y desarrollando una gran pasión por la literatura. Sin experiencia profesional como escritor, trata de abrirse camino en un mundo complicado y hermético, pero, tenga o no éxito, nunca cesará en su pasión. Su obra trata de conciliar y combinar dos de sus disciplinas favoritas, la física y la filosofía, para dar a luz relatos de ciencia-ficción con un trasfondo humano.</p>
+
+        </div> 
+        <img class="card-img-right flex-auto d-none d-lg-block" src="{% static 'autor/img/albert.jpg' %}" style="height:300px; width: 222px; margin-top: 10px; margin-right:10px;">
+    
+
+    </div>
+</div>
+
+<div class="card-deck mb-3 text-center" style="height:15%; width:30%; margin-left:33%; margin-bottom:20px;">
+
+
+    <div class="card mb-4 shadow-sm">
+
+        <div class="card-body">
+
+            <a href="https://twitter.com/Zower23" style="border-radius:50%;">
+                <img src="{% static 'autor/img/twitter.jpg' %}" style="height:40px; width:40px;">
+            </a>
+
+            <h5>Twitter</h5>
+
+        </div>
+
+    </div>
+    <div class="card mb-4 shadow-sm">
+
+        <div class="card-body">
+            <a href="https://instagram.com/_ser_y_tiempo" style="border-radius:50%;">
+                <img src="{% static 'autor/img/instagram.jpg' %}" style="height:40px; width:40px;">
+            </a>
+
+            <h5>Instagram</h5>
+        </div>
+
+    </div>
+    <div class="card mb-4 shadow-sm">
+
+        <div class="card-body">
+            <a href="https://www.facebook.com/profile.php?id=100069400703775" style="border-radius:50%;">
+                <img src="{% static 'autor/img/facebook.jpg' %}" style="height:40px; width:40px;">
+            </a>
+
+            <h5>Facebook</h5>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+{% endblock %}

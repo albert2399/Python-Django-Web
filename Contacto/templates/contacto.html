@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="contenedorFormulario">
+
+    {% if 'valido' in request.GET %}
+
+        <p style="color:white;">Se ha enviado la información. ¡Grácias por contactarnos!</p>
+
+    {% elif 'invalido' in request.GET %}
+
+        <p style="color:white;">Lo sentimos, no se ha podido enviar la información. Comprueba que todos los datos introducidos son válidos</p>
+
+
+    {% endif %}
+
+    <form action="" method="POST" style="text-align:center;">
+    {% csrf_token %}
+    <table style="color:white; margin: 20px auto;">{{formulario.as_table}}</table>
+    <input type="submit" value="Enviar" style="width: 100px;">
+        
+    </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% comment %} {% load crispy_forms_tags %} {% endcomment %}
+
+{% block content %}
+
+ <form method="post" action="" style="color:antiquewhite; text-align:justify; width: 75%; ">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <div style="width: 75%; margin: auto;">
+
+<br/>
+    <button type="submit" class="btn btn-success">Registrarse</button>
+
+    </div> 
+
+</form>
+
+    {% comment %} <form method="POST">
+        {% csrf_token %}
+        
+        <button type="submit">Enviar</button>
+    </form>
+
+</form> {% endcomment %}
+
+{% endblock %}

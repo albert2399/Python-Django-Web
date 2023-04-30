@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+   <!-- Heading -->
+   <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'wormgateWeb/img/wgt.jpg' %}" alt="">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4" >
+            <span class="section-heading-upper">Sinópsis</span>
+          </h2>
+          <p class="mb-3">Todos nos hemos sentido atrapados en nuestra propia realidad, pero ¿Qué pasaría si pudiéramos explorar otras realidades? Esta historia narra el viaje de un joven que descubre cómo hacerlo. Desde pequeños cambios hasta grandes diferencias, esta aventura explora diferentes escenarios des del punto de vista del joven Daniel, quien vivirá un viaje que jamás habría imaginado.
+          </p>
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+    <!-- Message -->
+    <section class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class='clickable-row'>
+              <h2 class="section-heading mb-4">
+                <span class="section-heading-lower">Lee el primer capítulo ahora</span>
+              </h2>
+                <p class="nav-item px-lg-4"><a href="{% url 'Primer Capítulo' %}" class="link">>Haz click aquí<</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% endblock %}

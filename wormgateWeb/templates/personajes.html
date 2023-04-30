@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    {% for personaje in personajes %}
+
+    <div class="col-md-3" style="text-align:center; margin: 50px 37%; width:600px;">
+
+        <div class="card" style="width:100%; height: auto; margin: 10px 5px; background-color:rgba(28, 87, 169, 0.8); color:aliceblue;">
+            <br/>
+            <h4 class="card-title">{{personaje.nombre}}</h4>
+
+          <div class="card-body" style="text-align:center;">
+
+
+
+            <img src="{{personaje.imagen.url}}" class="card-img-top" style="width:380px;">
+
+            <p class="card-text">{{personaje.descripcion}}</p>
+
+
+          </div>
+
+
+
+        </div>
+
+    </div>
+
+    <!-- <div><p>
+
+    <h3 style="color: white; text-align: center;">{{personaje.nombre}}</h3>
+
+    <p><img src="{{personaje.imagen.url}}"></p>
+
+    <p style="color: white; text-align: center;">{{personaje.descripcion}}</p>
+
+    </p></div> -->
+
+<style>
+    
+    img {
+        margin: auto;
+        display: block;
+        height: 500px;
+        width: 420px;
+
+    }
+</style>
+
+    {% endfor %}
+
+{% endblock %}
